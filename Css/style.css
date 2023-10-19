@@ -1,0 +1,695 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("./variable.css");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: var(--Background);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-anchor: none;
+  font-weight: 300;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* header*/
+#head-main {
+  display: inline-flex;
+  max-width: 100vw;
+  max-height: 10vh;
+}
+#head-main .head-logo {
+  width: 25vw;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+}
+#head-main .nav-head {
+  width: 65vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#head-main .nav-head .list-nav {
+  display: inline-flex;
+  list-style: none;
+  align-items: center;
+  align-self: center;
+  gap: 3rem;
+}
+#head-main .nav-head .list-nav .menus a {
+  background-color: var(--toggle-icon);
+  border-radius: 60%;
+  align-self: center;
+  padding: 25px;
+  margin-left: 5rem;
+  color: var(--test);
+  transition: 0.6s;
+  font-size: 20px;
+}
+#head-main .prueba {
+  max-height: 10vh;
+  display: flex;
+  align-items: center;
+}
+#head-main .prueba .toggle {
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+  align-self: center;
+  border-radius: 2rem;
+  background-color: var(--toggle-icon);
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#head-main .prueba .toggle img {
+  color: var(--test);
+}
+#head-main .prueba .toggle input {
+  display: none;
+}
+/*
+#head-main .prueba .toggle .theme {
+  margin-right: 23px;
+  font-size: 18px;
+  transition: all 0.5s;
+  border-radius: 90%;
+  border: solid black 0.1px;
+}
+*/
+#head-main .prueba .toggle .theme {
+  width: 2rem;
+  height: 1.9rem;
+  border-radius: 90%;
+  border: solid black 0.1px;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.5s;
+  background-color: var(--back-tog);
+  fill: var(--Background);
+}
+
+.active-toggle {
+  content: url(../Images/dark_mode_FILL0_wght400_GRAD0_opsz24.svg);
+  transform: translateX(31px);
+  color: white;
+  transition: all 0.5s;
+}
+.active-logo {
+  content: url(../Images/fondo-dark.png);
+}
+/*Parte central de la pagina */
+#main-contain {
+  display: inline-flex;
+  max-width: 100vw;
+  height: 90vh;
+  font-size: 3.5rem;
+}
+#main-contain .mid-box {
+  min-width: 50vw;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20%;
+  margin-top: 5%;
+  font-size: 70px;
+}
+
+#main-contain .mid-box-image {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  margin-right: 20px;
+}
+#main-contain .mid-box h1 {
+  font-weight: 600;
+}
+#main-contain .mid-box h3 {
+  width: 600px;
+  font-size: medium;
+  font-weight: 700;
+}
+/*footer*/
+#social-section {
+  display: inline-flex;
+  flex-direction: column;
+  height: 10vh;
+  background-color: var(--toggle-icon);
+  border-radius: 20%;
+  position: sticky;
+  bottom: 23px;
+  left: 3px;
+  padding: 3px;
+}
+#social-section .footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#social-section .footer-list .footer-logos {
+  font-size: 25px;
+  padding: 3px;
+}
+/*seccion acerca de mi */
+#about-center {
+  display: inline flex;
+  flex-direction: column;
+  transition: all 5s;
+  scroll-behavior: auto;
+  font-size: 18px;
+  width: 100vw;
+}
+#about-center #information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-indent: auto;
+  text-align: justify;
+  gap: 1rem;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+#about-center #information p {
+  background-color: var(--toggle-icon);
+  text-align: justify;
+  border-radius: 32px;
+  font-size: 23px;
+  padding: 1rem;
+  word-spacing: 1rem;
+  color: var(--test);
+}
+#about-center .title-about {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  font-size: 25px;
+}
+#about-center #information #info_img1 {
+  position: absolute;
+  width: 300px;
+  right: 350px;
+  bottom: 80px;
+}
+#about-center #info_text1 {
+  width: 750px;
+  left: 79px;
+  top: 151px;
+  position: absolute;
+}
+#about-center #info_text2 {
+  position: absolute;
+  width: 750px;
+  right: 182px;
+  bottom: 157px;
+}
+#about-center #information #info_img2 {
+  position: absolute;
+  width: 300px;
+  left: 350px;
+  bottom: 0px;
+}
+/*seccion tecnologias*/
+#box2_about {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+#about-tech {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 3rem 0rem;
+}
+#about-tech #box_desing {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+#about-tech h3 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+#about-tech #about-desing {
+  background-color: var(--toggle-icon);
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+  height: 500px;
+  width: 380px;
+  font-size: 18px;
+}
+#about-tech #about-dev {
+  background-color: var(--toggle-icon);
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  height: 500px;
+  width: 380px;
+  font-size: 18px;
+}
+/*seccion estudios y experiencia*/
+#about-bottom {
+  display: inline-flex;
+  font-size: 17px;
+  width: 100vw;
+  height: 50vh;
+  gap: 1rem;
+}
+#about-bottom #education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+#about-bottom #education .prueba_bg {
+  width: calc(900px - 38px - 5px);
+  height: 220px;
+  margin-left: 38px;
+  background-color: var(--toggle-icon);
+  border: solid var(--fondo) 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35%;
+}
+#about-bottom #education ul li {
+  text-align: justify;
+  text-align: center;
+  padding: 5px;
+}
+#about-bottom #experiencie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+#about-bottom #experiencie .box_exp {
+  width: calc(900px - 38px);
+  height: 220px;
+  background-color: var(--toggle-icon);
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35%;
+  gap: 0.5rem;
+}
+/*seccion proyectos*/
+#projects {
+  width: 100vw;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 3rem;
+}
+#projects #projects-box {
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 1rem;
+  padding-left: calc();
+}
+#projects h3 {
+  display: flex;
+  justify-content: flex-start;
+  width: 2rem;
+  height: 2rem;
+  font-size: 20px;
+}
+#projects .pt-box {
+  width: 30vw;
+  height: 32vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 1rem;
+  border: solid var(--toggle-icon) 2px;
+  border-radius: 5%;
+  padding: 1rem;
+}
+#projects .pt-box::before {
+  background-image: url(../Images/undraw_code_thinking_re_gka2.svg);
+  opacity: 0.3;
+  position: absolute;
+  content: " ";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: auto;
+  border-radius: 5%;
+}
+/*pruebas*/
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#feature-text {
+  margin-left: 8px;
+}
+.input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: auto;
+  background-color: white;
+  margin-left: 8px;
+  animation: blink 0.6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1500px) {
+  /*seccion acerca de mi central*/
+  #about-bottom {
+    display: inline-flex;
+    font-size: 16px;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  #about-bottom #education .prueba_bg {
+    width: calc(700px);
+    height: 240px;
+    margin-left: 0px;
+    background-color: var(--toggle-icon);
+  }
+
+  #about-bottom #experiencie .box_exp {
+    width: calc(700px);
+    height: 240px;
+    background-color: var(--toggle-icon);
+    gap: 0.5rem;
+  }
+  /*seccion acerca de mi */
+  #about-center {
+    font-size: 18px;
+  }
+
+  #about-center #information p {
+    font-size: 21px;
+  }
+  #about-center #information #info_img1 {
+    right: 250px;
+    bottom: 90px;
+  }
+  #about-center #info_text1 {
+    left: 69px;
+  }
+  #about-center #info_text2 {
+    right: 65px;
+    bottom: 157px;
+  }
+  #about-center #information #info_img2 {
+    top: 30px;
+  }
+}
+/*tablet */
+@media (max-width: 1024px) {
+  /*header*/
+  #head-main .head-logo {
+    width: 26vw;
+  }
+  #head-main .nav-head {
+    width: 70vw;
+  }
+  #head-main .nav-head .list-nav {
+    gap: 1.5rem;
+  }
+  #head-main .nav-head .list-nav .menus a {
+    padding: 15px;
+    margin-left: 1rem;
+  }
+  /*Parte central de la pagina */
+  #main-contain {
+    font-size: 3rem;
+  }
+  #main-contain .mid-box {
+    width: 512px;
+    margin-top: 8%;
+    font-size: 50px;
+  }
+  #main-contain .mid-box h3 {
+    word-spacing: 7px;
+  }
+  #main-contain .mid-box-image {
+    width: 512px;
+    margin-right: 0px;
+  }
+  /*seccion acerca de mi */
+
+  #about-center #information #info_img1 {
+    right: 60px;
+    bottom: 100px;
+  }
+  #about-center #info_text1 {
+    width: 565px;
+  }
+  #about-center #info_text2 {
+    right: 65px;
+  }
+  /*about tech*/
+  #about-tech {
+    margin: 1rem 0rem;
+  }
+  #about-tech #about-desing {
+    height: 340px;
+    width: 400px;
+  }
+  #about-tech #about-dev {
+    height: 340px;
+    width: 400px;
+  }
+  /*seccion acerca de mi central*/
+  #about-bottom {
+    gap: 0.5rem;
+  }
+  #about-bottom #education .prueba_bg {
+    width: calc(500px);
+    height: 390px;
+    margin-left: 0px;
+  }
+  #about-bottom #education .prueba_bg h3 {
+    margin-bottom: 10px;
+  }
+
+  #about-bottom #experiencie .box_exp {
+    width: calc(500px);
+    height: 390px;
+    gap: 1rem;
+  }
+  #about-bottom #experiencie .box_exp li {
+    margin-bottom: 10px;
+  }
+}
+/*celular*/
+@media (max-width: 600px) {
+  #head-main .head-logo {
+    width: 200px;
+  }
+  #head-main .nav-head {
+    width: 400px;
+  }
+  #head-main .nav-head .list-nav {
+    gap: 1rem;
+  }
+  #head-main .nav-head .list-nav .menus a {
+    padding: 5px;
+    margin-left: 0.5rem;
+    font-size: 16px;
+  }
+  /*Parte central de la pagina */
+  #main-contain .mid-box-image {
+    display: none;
+  }
+  #main-contain .mid-box {
+    width: 600px;
+  }
+  #main-contain .mid-box h3 {
+    word-spacing: 15px;
+  }
+  /*seccion acerca de mi */
+  #about-center #information p {
+    font-size: 20px;
+    display: flex;
+    text-align: justify;
+    word-spacing: 10px;
+  }
+  #about-center #information #info_img1 {
+    display: none;
+  }
+  #about-center #info_text1 {
+    width: 450px;
+    left: 79px;
+    top: 151px;
+    position: absolute;
+  }
+  #about-center #info_text2 {
+    width: 500px;
+    height: 180px;
+    right: 0px;
+    left: 50px;
+    bottom: 130px;
+    word-spacing: 10px;
+  }
+  #about-center #information #info_img2 {
+    width: 250px;
+    top: 15px;
+    left: 160px;
+  }
+  /*seccion tecnologias*/
+  #about-tech {
+    width: 100vw;
+    height: 50vh;
+    font-size: 15px;
+    margin: 0.5rem 0rem;
+  }
+  #about-tech #box_desing {
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  #about-tech #about-desing {
+    gap: 1rem;
+    height: 250px;
+    width: 250px;
+    font-size: 15px;
+  }
+  #about-tech #about-dev {
+    gap: 1.5rem;
+    height: 250px;
+    width: 250px;
+    font-size: 15px;
+  }
+  /*seccion estudios y experiencia*/
+  #about-bottom {
+    flex-direction: column;
+    font-size: 15px;
+    height: 60vh;
+    gap: 1rem;
+  }
+  #about-bottom #education .prueba_bg {
+    width: 580px;
+    height: 240px;
+    margin-left: 0px;
+    background-color: var(--toggle-icon);
+    border: solid var(--fondo) 1px;
+    border-radius: 30%;
+  }
+  #about-bottom #education ul li {
+    padding: 2px;
+  }
+  #about-bottom #experiencie .box_exp {
+    width: 580px;
+    height: 240px;
+    border: solid var(--fondo) 1px;
+    border-radius: 30%;
+    gap: 0.3rem;
+  }
+  /*seccion proyectos*/
+  #projects {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    gap: 1rem;
+    border: solid var(--Background) 1px;
+    position: relative;
+  }
+  #projects #projects-box {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0rem;
+  }
+  #projects h3 {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    margin: 0.5rem 0rem;
+  }
+  #projects .pt-box {
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 1rem;
+    border: solid var(--toggle-icon) 2px;
+    border-radius: 5%;
+    padding: 1rem;
+  }
+}

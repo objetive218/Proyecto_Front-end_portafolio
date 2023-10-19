@@ -1,0 +1,24 @@
+:root {
+  --Background: hsl(0, 0%, 100%);
+  --fondo: rgba(41, 39, 42, 0.5);
+  --toggle-icon: rgba(156, 230, 175, 0.58);
+  --test:hsl(0, 0%, 0%);
+  --back-tog:rgba(156, 230, 175, 0.58);
+  --font-color: hsl(0, 0%, 0%);
+  --input: hsl(0, 0%, 52%);
+  --toogle: "./Images/light_mode_FILL0_wght400_GRAD0_opsz24.svg";
+  --logo: "./Images/logo nombre verde sin marca de agua.JPG";
+  --image: "./Images/undraw_code_thinking_re_gka2.svg";
+}
+[data-theme="dark"] {
+  --Background: rgba(105, 107, 112, 0.25);
+  --toggle-icon: rgba(0, 0, 0, 0.25);
+  --test: rgb(255, 255, 255);
+  --back-tog:none;
+  --fondo: rgba(41, 39, 42, 1);
+  --font-color: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 52%);
+  --toogle: "./Images/dark_mode_FILL0_wght400_GRAD0_opsz24.svg";
+  --logo: "./Images/fondo-dark.png";
+  --image: "./Images/image-dark.png";
+}
