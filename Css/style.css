@@ -551,20 +551,6 @@ li {
 }
 /*celular*/
 @media (max-width: 600px) {
-  #head-main .head-logo {
-    width: 200px;
-  }
-  #head-main .nav-head {
-    width: 400px;
-  }
-  #head-main .nav-head .list-nav {
-    gap: 1rem;
-  }
-  #head-main .nav-head .list-nav .menus a {
-    padding: 5px;
-    margin-left: 0.5rem;
-    font-size: 16px;
-  }
   /*Parte central de la pagina */
   #main-contain .mid-box-image {
     display: none;
@@ -691,5 +677,119 @@ li {
     border: solid var(--toggle-icon) 2px;
     border-radius: 5%;
     padding: 1rem;
+  }
+  /*header*/
+  #head-main {
+    width: 600px;
+    gap: 3rem;
+  }
+  #head-main .head-logo {
+    width: 300px;
+  }
+  #head-main .nav-head {
+    width: 400px;
+    justify-content: flex-start;
+  }
+  #head-main .nav-head .list-nav .menus a {
+    padding: 5px;
+    margin-left: 0.5rem;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  #head-main .prueba {
+    width: 100px;
+  }
+  /*burguer menu*/
+  #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin: 30px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+  }
+  /* THE LINES */
+  #burger-menu span,
+  #burger-menu span::before,
+  #burger-menu span::after {
+    background: var(--toggle-icon);
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+
+  span:before,
+  span:after {
+    content: "";
+  }
+
+  /* TOP */
+  #burger-menu span::before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+  }
+
+  /* MIDDLE */
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+  }
+
+  /* BOTTOM */
+  #burger-menu span::after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+  }
+
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+  }
+
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+  }
+
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 20%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 10px;
+    transition: all 0.3s ease-in-out;
+    flex-direction: column;
+  }
+  #menu.overlay {
+    visibility: visible;
+    width: 80%;
+    height: 20px;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #head-main .nav-head .list-nav {
+    flex-direction: column;
+    gap: 2rem;
+    background-color: none;
   }
 }
